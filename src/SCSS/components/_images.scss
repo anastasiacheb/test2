@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+.image {
+    width: 34.5rem;
+    height: auto;
+
+    &_l {
+        padding-bottom: 4.8rem;
+        margin-top: auto;
+
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+}
+

@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+.text, p, a, label {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    color: $black;
+    @include regular;
+}
+
+.text-h1 {
+    font-size: 3.2rem;
+    @include bold;
+    color: $black;
+}
+
+.text-h2 {
+    font-size: 2.4rem;
+    @include bold;
+    color: $black;
+} 
+
+.text_semibold {
+    @include semibold;
+}
+
+.text_small {
+    font-size: 1.5rem;
+    line-height: auto;
+}
+
+.text_gray {
+    color: $gray;
+}
+
+.text_yellow {
+    color: $yellow;
+}
+

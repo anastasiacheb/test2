@@ -1,0 +1,141 @@
+@use "../abstracts" as *;
+
+.main {
+    height: 100vh;
+    @include column;
+    width: auto;
+}
+
+.header {
+    background-color: #FBF9F8;
+    border-radius: 0 0 3.2rem 3.2rem;
+    flex-grow: 1;
+    width: 100%;
+
+    @include desktop {
+        flex-grow: 0;
+    }
+
+    &__wrap {
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+        height: 100%;
+        position: relative;
+
+        @include tablet {
+            @include center;
+        }
+    }
+
+    &_baige {
+        background-color: #FFF5EA;
+        padding-bottom: 5.2rem;
+
+        @include tablet {
+            padding-bottom: 0;
+        }
+
+        @include tablet {
+            padding-bottom: 4.8rem;
+            padding-top: 4.8rem;
+        }
+    }
+
+    &_green {
+        background-color: #E5FFE4;
+
+        & > div {
+            @include center;
+
+            @include desktop {
+                padding: 7.2rem 0 11rem 0;
+            }
+        }
+    }
+
+    &_warmgreen {
+        background-color: #F0FFE4;
+
+        & > div {
+            @include center;
+
+            @include desktop {
+                padding: 7.2rem 0 11rem 0;
+            }
+        }
+    }
+
+    &_red {
+        background-color: #FFEFE4;
+    }
+
+    &_orange {
+        background-color: #FFF4E4;
+    }
+
+    &_yellow {
+        background-color: #FFFBD2;
+    }
+
+    &__title {
+        @include column;
+        gap: 2.4rem;
+        text-align: center;
+    }
+}
+
+.section {
+    padding-left: 2.1rem;
+    padding-right: 2.1rem;
+    @include column;
+    width: 100%;
+
+    @include tablet {
+        padding: 0 4.8rem;
+    }
+
+    @include desktop {
+        max-width: 66rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.footer {
+    @include column;
+    gap: 3.2rem;
+
+    &_m {
+        padding-top: 3.2rem;
+        padding-bottom: 3.2rem;
+
+        @include tablet {
+            padding-bottom: 6.4rem;
+        }
+
+        @include desktop {
+            padding-top: 6.4rem;
+        }
+    }
+
+    &_l {
+        padding-top: 3.2rem;
+        padding-bottom: 6.4rem;
+        flex: 0 1 auto;
+
+        @include desktop {
+            padding-top: 6.4rem;
+        }
+    }
+}
+
+.content {
+
+    &__wrap {
+        @include column;
+        gap: 1.6rem;
+        width: 100%;
+    }
+}

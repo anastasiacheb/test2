@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website">
+    <title>Website</title>
+    <link rel="stylesheet" href="src/SCSS/style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <main class="main">
+      <header class="header header_green">
+        <div class="section header__wrap">
+          <div class="pagination__container">
+            <div class="pagination pagination_active"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+            <div class="pagination"></div>
+          </div>
+          <div class="header__title">
+            <h1 class="text-h1">Define Your Goal</h1>
+            <p>Looking to slim down, stay fit, or gain muscle?</p>  
+          </div>
+        </div>
+      </header>
+      <section class="section footer footer_m">
+        <div class="content__wrap">
+          <label class="radio__label" for="lose">
+            To lose weight
+            <input checked class="radio__input" type="radio" name="goal" id="lose">
+            <img src="public/icons/select.svg" alt="icon" class="icon_size-s radio__icon">
+          </label>
+          <label class="radio__label" for="Maintain">
+            Maintain your current weight
+            <input class="radio__input" type="radio" name="goal" id="Maintain">
+            <img src="public/icons/select.svg" alt="icon" class="icon_size-s radio__icon">
+          </label>
+          <label class="radio__label" for="Gain">
+            Gain weight
+            <input class="radio__input" type="radio" name="goal" id="Gain">
+            <img src="public/icons/select.svg" alt="icon" class="icon_size-s radio__icon">
+          </label>
+        </div>
+        <div class="button__container">
+          <button class="button">Continue</button>
+          <button class="button button_plain">Back</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>
