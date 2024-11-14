@@ -32,3 +32,13 @@
         opacity: 0;
     }
 }
+
+.date {
+    @include border;
+    height: 5.2rem;
+    width: 100%;
+    padding: 1.5rem;
+    color: $gray;
+    text-align: center;
+    outline: none;
+}
