@@ -189,6 +189,13 @@ button {
   -moz-appearance: none;
        appearance: none;
 }
+.date::-webkit-datetime-edit {
+  height: 5.2rem;
+  width: 100%;
+  padding: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
 
 .main {
   height: 100vh;

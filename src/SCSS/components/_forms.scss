@@ -43,4 +43,12 @@
     outline: none;
     -webkit-appearance: none;
     appearance: none;
+
+    &::-webkit-datetime-edit {
+        height: 5.2rem;
+        width: 100%;
+        padding: 1.5rem;
+        color: $gray;
+        text-align: center;
+    }
 }
