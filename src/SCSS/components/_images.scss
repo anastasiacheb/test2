@@ -12,5 +12,39 @@
             margin-top: 0;
         }
     }
+
+    &_mobile {
+        width: 34.5rem;
+        height: auto;
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &_tablet {
+        display: none;
+        width: 46.2rem;
+        height: auto;
+
+        @include tablet {
+            display: block;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &_desktop {
+        display: none;
+        width: 42.8rem;
+        height: auto;
+
+        @include desktop {
+            display: block;
+        }
+    }
+
+    
 }
 

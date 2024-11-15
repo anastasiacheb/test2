@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website">
+    <title>Website</title>
+    <link rel="stylesheet" href="src/SCSS/style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <main class="main">
+      <header class="header header_norm">
+        <div class="section header__wrap">
+          <div class="image">
+            <img src="public/images/wireframe.svg" alt="illustration">
+          </div>
+          <div class="header__title">
+            <h1 class="text-h1">Ooops...</h1>
+            <p>Based on the information provided, it’s best to consult with a healthcare professional before using this app.</p>  
+          </div>
+        </div>
+      </header>
+      <section class="section footer footer_m">
+        <div class="card-risk">
+          <div class="card-risk__info">
+            <p class="text_semibold">I Understand the Risks</p>
+            <label for="risk" class="toggle">
+              <input class="toggle__input" type="checkbox" name="risk" id="risk">
+            </label>
+          </div>
+          <p class="text_small text_gray">I’ve consulted a nutrition professional
+            and choose to proceed.</p>
+        </div>
+        <div class="button__container">
+          <button class="button">Exit</button>
+          <button class="button button_plain">Back</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>

@@ -16,6 +16,7 @@
         flex-grow: 0;
     }
 
+
     &__wrap {
         padding-top: 2.4rem;
         padding-bottom: 2.4rem;
@@ -27,6 +28,15 @@
         }
     }
 
+    &__container {
+        @include center;
+
+        @include desktop {
+        padding-bottom: 7.2rem;
+        padding-top: 7.2rem;
+    }
+    }
+
     &_baige {
         background-color: #FFF5EA;
         padding-bottom: 5.2rem;
@@ -35,7 +45,7 @@
             padding-bottom: 0;
         }
 
-        @include tablet {
+        @include desktop {
             padding-bottom: 4.8rem;
             padding-top: 4.8rem;
         }
@@ -48,7 +58,7 @@
             @include center;
 
             @include desktop {
-                padding: 7.2rem 0 11rem 0;
+                padding: 11rem 0 7.2rem 0;
             }
         }
     }
@@ -60,28 +70,85 @@
             @include center;
 
             @include desktop {
-                padding: 7.2rem 0 11rem 0;
+                padding: 11rem 0 7.2rem 0;
             }
         }
     }
 
     &_red {
         background-color: #FFEFE4;
+        flex-grow: 0;
     }
 
     &_orange {
         background-color: #FFF4E4;
+
+        & > div {
+            @include center;
+
+            @include desktop {
+                padding: 7.2rem 0;
+            }
+        }
     }
 
     &_yellow {
         background-color: #FFFBD2;
+
+        & > div {
+            @include center;
+
+            @include tablet {
+                padding: 7.2rem 4.8rem;
+            }
+        }
     }
 
     &__title {
         @include column;
         gap: 2.4rem;
         text-align: center;
+
+        &_center {
+            margin-top: 5.4rem;
+
+            @include desktop {
+                margin-top: 0;
+            }
+        }
+
+        &_small {
+            padding-top: 5.4rem;
+            padding-bottom: 0.8rem;
+
+            @include tablet {
+                padding-top: 11.8rem;
+                padding-bottom: 6.4rem;
+            }
+        }
     }
+
+    &_big >div {
+        @include center;
+
+        @include tablet {
+            padding-top: 7.2rem;
+            padding-bottom: 7.2rem;
+        }
+    }
+
+    &_norm {
+        flex-grow: 1;
+        &>div {
+            @include center;
+        }
+    }
+
+    &__image {
+        padding-top: 2.4rem;
+        position: relative;
+    }
+    
 }
 
 .section {
@@ -91,7 +158,8 @@
     width: 100%;
 
     @include tablet {
-        padding: 0 4.8rem;
+        padding-left: 4.8rem;
+        padding-right: 4.8rem;
     }
 
     @include desktop {
@@ -129,6 +197,47 @@
             padding-top: 6.4rem;
         }
     }
+
+    &_big {
+        justify-content: space-between;
+        height: 100%;
+
+        & > div:first-child {
+            flex-grow: 1;
+
+            @include tablet {
+                flex-grow: 0;
+            }
+        }
+    }
+
+    &_small {
+        gap: 1.6rem;
+
+        & p, span {
+            text-align: center;
+        }
+    }
+
+    &_medium {
+        gap: 2.4rem;
+
+        @include tablet {
+            gap: 3.2rem;
+        }
+    }
+
+    &__card {
+        @include tablet {
+            padding-bottom: 6.4rem;
+        }
+
+        @include desktop {
+            padding-bottom: 3.2rem;
+            padding-top: 6.4rem
+        }
+         
+    }
 }
 
 .content {
@@ -138,4 +247,49 @@
         gap: 1.6rem;
         width: 100%;
     }
+}
+
+.range {
+    @include column;
+    gap: 1.6rem;
+    width: 100%;
+
+    &__input {
+        padding: 0.6rem 0 0.7rem 0;
+        width: 100%;
+    }
+
+    &__info {
+        @include column;
+        gap: 0.6rem;
+    }
+}
+
+.image1 {
+    opacity: 1;
+}
+
+.image2 {
+    opacity: 0;
+    position: absolute;
+    top: 2.4rem;
+    left: 0;
+    transition: all 0.4s;
+}
+
+
+.image1_animate {
+    opacity: 0;
+    position: absolute;
+    top: 2.4rem;
+    left: 0;
+}
+
+.image2_animate {
+    opacity: 1;
+    position: static;
+}
+
+.none {
+    display: none;
 }

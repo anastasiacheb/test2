@@ -10,14 +10,14 @@
   </head>
   <body>
     <main class="main">
-      <header class="header header_warmgreen">
+      <header class="header header_orange">
         <div class="section header__wrap">
           <div class="pagination__container">
             <div class="pagination pagination_active"></div>
             <div class="pagination pagination_active"></div>
             <div class="pagination pagination_active"></div>
             <div class="pagination pagination_active"></div>
-            <div class="pagination"></div>
+            <div class="pagination pagination_active"></div>
             <div class="pagination"></div>
             <div class="pagination"></div>
             <div class="pagination"></div>
@@ -25,13 +25,23 @@
             <div class="pagination"></div>
           </div>
           <div class="header__title header__title_center">
-            <h1 class="text-h1">Enter Your Birthdate</h1>
-            <p>This will enable us to adjust your program as you progress, aligning with the natural shifts in metabolism that come with age</p>  
+            <h1 class="text-h1">Enter Your Height</h1>
+            <p>It's key for more precise BMI monitoring, accurate BMR and TDEE calculations</p>  
           </div>
         </div>
       </header>
       <section class="section footer footer_m">
-        <input type="date" name="date" id="date" value="01.01.2000" class="date">
+        <div class="height">
+          <input aria-label="height" type="number" min="0" max="230" name="height" id="height" class="height__input text_gray" value="170">
+          <div class="height__units">
+            <label class="height__label" for="cm">cm
+              <input checked class="height__radio" type="radio" name="units" id="cm">
+            </label>
+            <label class="height__label" for="ft">ft 
+              <input class="height__radio" type="radio" name="units" id="ft">
+            </label>
+          </div>
+        </div>
         <div class="button__container">
           <button class="button">Continue</button>
           <button class="button button_plain">Back</button>

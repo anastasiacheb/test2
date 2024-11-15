@@ -6,34 +6,56 @@
     color: $black;
     @include regular;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
 
-.text-h1 {
-    font-size: 3.2rem;
-    @include bold;
-    color: $black;
-}
+    &-h1 {
+        font-size: 3.2rem;
+        @include bold;
+        color: $black;
+        text-align: center;
+    }
 
-.text-h2 {
-    font-size: 2.4rem;
-    @include bold;
-    color: $black;
-} 
+    &-h2 {
+        font-size: 2.4rem;
+        @include bold;
+        color: $black;
+    } 
+    
+    &_semibold {
+        @include semibold;
+    }
+    
+    &_bold {
+        @include bold;
+    }
 
-.text_semibold {
-    @include semibold;
-}
+    &_medium {
+        @include medium;
+    }
 
-.text_small {
-    font-size: 1.5rem;
-    line-height: auto;
-}
+    &_italic {
+        @include italic;
+    }
+    
+    &_small {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+    
+    &_gray {
+        color: $gray;
+    }
 
-.text_gray {
-    color: $gray;
-}
+    &_darkgray {
+        color: $darkgray;
+    }
+    
+    &_yellow {
+        color: $yellow;
+    }
 
-.text_yellow {
-    color: $yellow;
+    &_emoji {
+        font-size: 2.1rem;
+        line-height: 2.2rem;
+    }
 }
 

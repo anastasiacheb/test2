@@ -1,78 +1,64 @@
-let slideIndex = 0;
-showSlides()
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website">
+    <title>Website</title>
+    <link rel="stylesheet" href="src/SCSS/style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <main class="main">
+      <header class="header header_yellow">
+        <div class="section header__wrap">
+          <div class="header__title">
+            <h1 class="text-h1 text_animate fade text1">Goal Forecast</h1>
+            <p class="text_animate fade text2">Recommended rate ensures a sustainable approach to weight management, promoting lasting fat loss for long-term success.</p>  
+          </div>
+            <div class="header__image image_mobile">
+              <div class="image1">
+                <img src="public/images/graph.svg" alt="graph">
+              </div>
+              <div class="image2">
+                <img src="public/images/graph2.svg" alt="graph">
+              </div>
+            </div>
+            <div class="header__image image_tablet">
+              <div class="image1">
+                <img src="public/images/graphtablet.svg" alt="graph">
+              </div>
+              <div class="image2">
+                <img src="public/images/graphtablet2.svg" alt="graph">
+              </div>
+            </div><div class="header__image image_desktop">
+              <div class="image1">
+                <img src="public/images/graphdesktop.svg" alt="graph">
+              </div>
+              <div class="image2">
+                <img src="public/images/graphdesktop2.svg" alt="graph">
+              </div>
+            </div>
+          </div>
+      </header>
+      <section class="section footer footer_l text_animate fade section_animate">
+        <div class="range">
+          <div class="range__info">
+            <h2 class="text-h2"><span id="weight__value">0.2</span> kg/week</h2>
+            <p class="text_gray">recommended</p>
+          </div>
+          <div class="range__input">
+            <input type="range" min="0" max="0.4" step="0.1" id="weight" >
+          </div>
+        </div>
+        <div class="button__container">
+          <button class="button button_animate">Looks Great!</button>
+          <button class="button button_plain">Back</button>
+        </div>
+      </section>
 
-function showSlides() {
-  let cards = document.querySelectorAll(".card-rate");
-  for (let i = 0; i < cards.length; i++) {
-    cards[i].style.opacity = 0;
-  }
-  slideIndex++;
-
-  if (slideIndex > cards.length) {
-    slideIndex = 1;
-  }
-  cards[slideIndex - 1].style.opacity = '1';
-  setTimeout(showSlides, 3000);
-}
-
-window.addEventListener("load", () => {
-    fillSliderColor();
-})
-
-let slider = document.querySelector("#weight");
-let sliderValue = document.querySelector("#weight__value")
-
-function fillSliderColor() {
-    let value = (slider.value / slider.max) * 100;
-    slider.style.background = `linear-gradient(to right, #000000 ${value}% , #EEEEEE ${value}%)`;
-    sliderValue.textContent =  slider.value;
-}
-
-slider.addEventListener("input", () => {
-    fillSliderColor();
-})
-
-let btnAnimate = document.querySelector(".button_animate");
-let txtAnimate = document.querySelector(".text_animate");
-let text1 = document.querySelector(".text1");
-let text2 = document.querySelector(".text2");
-let section = document.querySelector(".section_animate");
-
-function toggleTransitionWithoutTimeout() {
-    text1.removeEventListener("transitionend", onTransitionEnd);
-    text1.addEventListener("transitionend", onTransitionEnd);
-  
-    text1.classList.remove("fade");
-
-    text2.removeEventListener("transitionend", onTransitionEnd);
-    text2.addEventListener("transitionend", onTransitionEnd);
-  
-    text2.classList.remove("fade");
-
-    section.removeEventListener("transitionend", onTransitionEnd);
-    section.addEventListener("transitionend", onTransitionEnd);
-  
-    section.classList.remove("fade");
-  }
-
-
-  function onTransitionEnd() {
-    text1.removeEventListener("transitionend", onTransitionEnd);
-  
-    let content = "Your Personal Plan";
-    text1.innerHTML = content;
-    text1.classList.add("fade");
-
-    text2.removeEventListener("transitionend", onTransitionEnd);
-  
-    let content2 = "We estimate that you will be able to reach a weight of 68.0 kg by 14 March 2024nd!"
-    text2.innerHTML = content2;
-    text2.classList.add("fade");
-
-    section.removeEventListener("transitionend", onTransitionEnd);
-  
-    let sectionContent = 
-    `<div class="card__container footer__card">
+      <section class="section footer footer_l none">
+        <div class="card__container footer__card">
           <h2 class="text-h2">Benefits of Your Plan</h2>
           <div class="card">
             <div class="card__info">
@@ -142,23 +128,9 @@ function toggleTransitionWithoutTimeout() {
         <div class="button__container">
           <button class="button">Awessome!</button>
           <button class="button button_plain">Back</button>
-        </div>`
-    section.innerHTML = sectionContent;
-    section.classList.add("fade");
-  }
-  
-  btnAnimate.addEventListener("click", toggleTransitionWithoutTimeout);
-
-let image1 = document.querySelectorAll(".image1");
-let image2 = document.querySelectorAll(".image2");
-
-btnAnimate.addEventListener("click", () => {
-    for (let i = 0; i < image1.length; i ++) {
-        image1[i].classList.add("image1_animate");
-    }
-
-    for (let i = 0; i < image2.length; i ++) {
-        image2[i].classList.add("image2_animate");
-    }
-})
-
+        </div>
+      </section>
+    </main>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>
