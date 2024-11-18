@@ -1,6 +1,10 @@
 @use "../abstracts" as *;
 
-.text, p, a, label, input {
+#datemask2 {
+    font-size: 17px;
+}
+
+.text, p, label, input {
     font-size: 1.7rem;
     line-height: 2.2rem;
     color: $black;

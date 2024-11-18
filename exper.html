@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Website">
     <title>Website</title>
-    <link rel="stylesheet" href="src/SCSS/style.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+
+      p, a {
+        font-size: 1.7rem;
+      }
+    </style>
   </head>
   <body>
     <main class="main">
@@ -33,7 +42,6 @@
       </header>
       <div class="section footer footer_m">
         <input aria-label="date" id="datemask2" class="date">
-        <input aria-label="date" id="datemask1" class="date elem_none">
         <div class="button__container">
           <button class="button">Continue</button>
           <button class="button button_plain">Back</button>
@@ -61,30 +69,12 @@ const inputmask_options = {
   insertMode: false
 };
 
-
-const datepicker_options2 = {
-  altFormat: "dd.mm.yyyy",
-  // appendText: "(dd/mm/yyyy)",
-  dateFormat: "dd.mm.yyyy",
-  // defaultDate: +1,
-  yearRange: "dd.mm.yyyy",
-  changeMonth: true,
-  changeYear: true
-};
-
-const inputmask_options2 = {
-  mask: "99.99.9999",
-  alias: "date",
-  placeholder: "dd.mm.yyyy",
-  insertMode: false
-};
-
 $("#datemask2").inputmask("99/99/9999", inputmask_options);
 $("#datemask2").datepicker(datepicker_options);
 
-$("#datemask1").inputmask("99.99.9999", inputmask_options2);
-$("#datemask1").datepicker(datepicker_options2);
-
+/*$( function() {
+  $( "#datemask2" ).datepicker(datepicker_options);
+} );*/
     </script>
     <script type="module" src="src/js/main.js"></script>
   </body>

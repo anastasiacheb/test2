@@ -6,6 +6,7 @@
     <meta name="description" content="Website">
     <title>Website</title>
     <link rel="stylesheet" href="src/SCSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
@@ -18,8 +19,75 @@
               <span>to Reach a Weight of 68.0 kg</span><br>
               <span class="text_darkgray">by 14 March 2024</span>
             </h1>
-            <div class="card-rate__wrap">
-              <div class="card-rate">
+
+            <div class="swiper elem_mobile">
+              <div class="card-rate__wrap swiper-wrapper">
+                <div class="card-rate swiper-slide">
+                  <div class="stars_wrap">
+                    <div class="stars">
+                      <img src="public/icons/Rating.svg" alt="rating stars">
+                    </div>
+                  </div>
+                  
+                  <div class="card-rate__info">
+                    <p class="text_darkgray text_italic">I've finally found a weight loss companion that understands my needs! The intuitive calorie tracking have made my journey enjoyable and effective. I'm down 15 pounds and feel amazing!</p>
+                    <p class="text_small text_gray">Robert, 35</p>
+                  </div>
+                </div>
+  
+                <div class="card-rate swiper-slide">
+                  <div class="stars_wrap">
+                    <div class="stars">
+                      <img src="public/icons/Rating.svg" alt="rating stars">
+                    </div>
+                  </div>
+                  <div class="card-rate__info">
+                    <p class="text_darkgray text_italic">Thanks to this app, I've managed to break through my weight plateau. Its detailed tracking have helped me shed those stubborn last pounds. It's easy to use and keeps me focused on my goals!</p>
+                    <p class="text_small text_gray">Steve, 32</p>
+                  </div>
+                </div>
+  
+                <div class="card-rate swiper-slide">
+                  <div class="stars_wrap">
+                    <div class="stars">
+                      <img src="public/icons/Rating.svg" alt="rating stars">
+                    </div>
+                  </div>
+                  <div class="card-rate__info">
+                    <p class="text_darkgray text_italic">I'm in awe of the changes I've seen using this app. It's like it was tailor-made for me. I've not only lost weight consistently but also learned habits that I know will stick with me for life!</p>
+                    <p class="text_small text_gray">Anna, 29</p>
+                  </div>
+                </div>
+  
+                <div class="card-rate swiper-slide">
+                  <div class="stars_wrap">
+                    <div class="stars">
+                      <img src="public/icons/Rating.svg" alt="rating stars">
+                    </div>
+                  </div>
+                  <div class="card-rate__info">
+                    <p class="text_darkgray text_italic">Simple, effective, and empowering – those are the words I'd use to describe this app. Its approach to diet tracking is so refreshing, and seeing the results week after week is incredibly motivating.</p>
+                    <p class="text_small text_gray">Jane, 39</p>
+                  </div>
+                </div>
+  
+                <div class="card-rate swiper-slide">
+                  <div class="stars_wrap">
+                    <div class="stars">
+                      <img src="public/icons/Rating.svg" alt="rating stars">
+                    </div>
+                  </div>
+                  <div class="card-rate__info">
+                    <p class="text_darkgray text_italic">The blend of technology and personal touch in this app is perfect. It's helped me understand my body better, and I'm down 23 pounds!</p>
+                    <p class="text_small text_gray">Veronica, 28</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card-rate__wrap elem_tablet">
+              <div class="card-rate rate">
                 <div>
                   <img src="public/icons/Rating.svg" alt="rating stars">
                 </div>
@@ -29,7 +97,7 @@
                 </div>
               </div>
 
-              <div class="card-rate">
+              <div class="card-rate rate">
                 <div>
                   <img src="public/icons/Rating.svg" alt="rating stars">
                 </div>
@@ -39,7 +107,7 @@
                 </div>
               </div>
 
-              <div class="card-rate">
+              <div class="card-rate rate">
                 <div>
                   <img src="public/icons/Rating.svg" alt="rating stars">
                 </div>
@@ -49,7 +117,7 @@
                 </div>
               </div>
 
-              <div class="card-rate">
+              <div class="card-rate rate">
                 <div>
                   <img src="public/icons/Rating.svg" alt="rating stars">
                 </div>
@@ -59,8 +127,8 @@
                 </div>
               </div>
 
-              <div class="card-rate">
-                <div>
+              <div class="card-rate rate">
+                <div class="stars">
                   <img src="public/icons/Rating.svg" alt="rating stars">
                 </div>
                 <div class="card-rate__info">
@@ -101,6 +169,10 @@
         </div>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper');
+    </script>
     <script type="module" src="src/js/slider.js"></script>
   </body>
 </html>

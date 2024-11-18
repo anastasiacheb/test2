@@ -41,50 +41,54 @@ button {
   align-items: center;
 }
 
-.text, p, a, label, input {
+#datemask2 {
+  font-size: 17px;
+}
+
+.text, p, label, input {
   font-size: 1.7rem;
   line-height: 2.2rem;
   color: #000000;
   font-weight: 400;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-.text-h1, p-h1, a-h1, label-h1, input-h1 {
+.text-h1, p-h1, label-h1, input-h1 {
   font-size: 3.2rem;
   font-weight: 700;
   color: #000000;
   text-align: center;
 }
-.text-h2, p-h2, a-h2, label-h2, input-h2 {
+.text-h2, p-h2, label-h2, input-h2 {
   font-size: 2.4rem;
   font-weight: 700;
   color: #000000;
 }
-.text_semibold, p_semibold, a_semibold, label_semibold, input_semibold {
+.text_semibold, p_semibold, label_semibold, input_semibold {
   font-weight: 600;
 }
-.text_bold, p_bold, a_bold, label_bold, input_bold {
+.text_bold, p_bold, label_bold, input_bold {
   font-weight: 700;
 }
-.text_medium, p_medium, a_medium, label_medium, input_medium {
+.text_medium, p_medium, label_medium, input_medium {
   font-weight: 500;
 }
-.text_italic, p_italic, a_italic, label_italic, input_italic {
+.text_italic, p_italic, label_italic, input_italic {
   font-style: italic;
 }
-.text_small, p_small, a_small, label_small, input_small {
+.text_small, p_small, label_small, input_small {
   font-size: 1.5rem;
   line-height: 1.8rem;
 }
-.text_gray, p_gray, a_gray, label_gray, input_gray {
+.text_gray, p_gray, label_gray, input_gray {
   color: rgba(0, 0, 0, 0.5);
 }
-.text_darkgray, p_darkgray, a_darkgray, label_darkgray, input_darkgray {
+.text_darkgray, p_darkgray, label_darkgray, input_darkgray {
   color: rgba(0, 0, 0, 0.7);
 }
-.text_yellow, p_yellow, a_yellow, label_yellow, input_yellow {
+.text_yellow, p_yellow, label_yellow, input_yellow {
   color: #F8AB15;
 }
-.text_emoji, p_emoji, a_emoji, label_emoji, input_emoji {
+.text_emoji, p_emoji, label_emoji, input_emoji {
   font-size: 2.1rem;
   line-height: 2.2rem;
 }
@@ -138,14 +142,14 @@ button {
 }
 
 .pagination {
-  width: 3rem;
+  width: calc((100vw - 4.8rem - 5.4rem) / 10);
   height: 0.6rem;
   border-radius: 1rem;
   background-color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .pagination {
-    width: 6rem;
+    width: calc((100vw - 9.6rem - 5.4rem) / 10);
   }
 }
 .pagination_active {
@@ -160,10 +164,32 @@ button {
   position: absolute;
   top: 0;
 }
+@media screen and (min-width: 1152px) {
+  .pagination__container {
+    max-width: 66rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .icon_size-s {
   width: 2.5rem;
   height: auto;
+}
+
+.stars {
+  height: auto;
+  width: 13.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.stars_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .button {
@@ -427,6 +453,7 @@ input[type=range]::-moz-range-thumb {
   height: 18rem;
   width: 100%;
   position: absolute;
+  align-items: center;
 }
 .card-rate__info {
   display: flex;
@@ -462,7 +489,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 .main {
-  height: 100vh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -768,4 +795,23 @@ input[type=range]::-moz-range-thumb {
 
 .none {
   display: none;
+}
+
+.elem_none {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .elem_mobile {
+    display: none !important;
+  }
+}
+
+.elem_tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .elem_tablet {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */

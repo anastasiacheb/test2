@@ -1,4 +1,22 @@
-@use 'abstracts';
+@use 'abstracts' as *;
 @use 'base';
 @use 'components';
 @use 'layout';
+
+.elem_none {
+    display: none;
+}
+
+.elem_mobile {    
+    @include tablet {
+        display: none !important;
+    } 
+}
+
+.elem_tablet {
+    display: none;
+    
+    @include tablet {
+        display: block;
+    } 
+}

@@ -33,11 +33,23 @@
             and choose to proceed.</p>
         </div>
         <div class="button__container">
-          <button class="button">Exit</button>
+          <button class="button bnt_toggle">Exit</button>
           <button class="button button_plain">Back</button>
         </div>
       </div>
     </main>
+    <script>
+      let toggleBtn = document.querySelector(".toggle__input");
+      let toggleText = document.querySelector(".bnt_toggle");
+
+      toggleBtn.addEventListener("input", () => {
+        if (toggleBtn.checked) {
+        toggleText.innerHTML = "Continue";
+        } else {
+          toggleText.innerHTML = "Exit";
+        }
+      })
+    </script>
     <script type="module" src="src/js/main.js"></script>
   </body>
 </html>

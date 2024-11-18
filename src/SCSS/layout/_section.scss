@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .main {
-    height: 100vh;
+    height: 100svh;
     @include column;
     width: auto;
 }

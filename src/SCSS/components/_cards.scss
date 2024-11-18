@@ -47,6 +47,7 @@
     height: 18rem;
     width: 100%;
     position: absolute;
+    align-items: center;
 
     &__info {
         @include column;

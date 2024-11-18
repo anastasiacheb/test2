@@ -2,7 +2,7 @@ let slideIndex = 0;
 showSlides()
 
 function showSlides() {
-  let cards = document.querySelectorAll(".card-rate");
+  let cards = document.querySelectorAll(".rate");
   for (let i = 0; i < cards.length; i++) {
     cards[i].style.opacity = 0;
   }
