@@ -6,6 +6,7 @@
     <meta name="description" content="Website">
     <title>Website</title>
     <link rel="stylesheet" href="src/SCSS/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
@@ -31,13 +32,41 @@
         </div>
       </header>
       <div class="section footer footer_m">
-        <input aria-label="date" type="date" name="date" id="date" class="date">
+        <input aria-label="date" id="datemask2" class="date">
         <div class="button__container">
           <button class="button">Continue</button>
           <button class="button button_plain">Back</button>
         </div>
       </div>
     </main>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+    <script>
+      const datepicker_options = {
+  altFormat: "mm/dd/yyyy",
+  // appendText: "(dd/mm/yyyy)",
+  dateFormat: "mm/dd/yy",
+  // defaultDate: +1,
+  yearRange: "1000:3000",
+  changeMonth: true,
+  changeYear: true
+};
+
+const inputmask_options = {
+  mask: "99/99/9999",
+  alias: "date",
+  placeholder: "mm/dd/yyyy",
+  insertMode: false
+};
+
+$("#datemask2").inputmask("99/99/9999", inputmask_options);
+$("#datemask2").datepicker(datepicker_options);
+
+/*$( function() {
+  $( "#datemask2" ).datepicker(datepicker_options);
+} );*/
+    </script>
     <script type="module" src="src/js/main.js"></script>
   </body>
 </html>
